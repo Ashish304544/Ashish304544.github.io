@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ashish Singh | ML & Full Stack Developer</title>
+<meta name="description" content="Portfolio of Ashish Singh, B.Tech CSE student building machine learning and web projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f1f4f9;--surface:#fff;--ink:#172033;--muted:#55607a;--line:#d3dae6;--accent:#2c4bff;--accent-ink:#fff;--tag:#dfe6ff}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1524;--surface:#172033;--ink:#e8edf7;--muted:#9aa6c0;--line:#2a3550;--accent:#7b93ff;--accent-ink:#0f1524;--tag:#26314f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:18px}
+nav div{display:flex;gap:18px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}nav a:hover{color:var(--ink)}
+.hero{padding:88px 0 64px}
+h1{font:800 clamp(44px,9vw,84px)/1 "Bricolage Grotesque",sans-serif;letter-spacing:-.03em;margin:0 0 20px}
+.lead{font-size:clamp(19px,2.6vw,23px);max-width:34em;color:var(--muted);margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:500;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 30px/1.2 "Bricolage Grotesque",sans-serif;margin:0 0 28px;letter-spacing:-.01em}
+h3{font:700 22px/1.3 "Bricolage Grotesque",sans-serif;margin:0}
+.muted{color:var(--muted)}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;margin-bottom:18px}
+.proj p{margin:10px 0 14px}
+.proj ul,.job ul{margin:8px 0 14px;padding-left:20px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px;padding:0;list-style:none}
+.tags li{background:var(--tag);border-radius:999px;padding:2px 12px;font-size:14px}
+.links{display:flex;gap:18px;font-weight:500}
+.links a{color:var(--accent)}
+.job{padding:0 0 26px 22px;border-left:2px solid var(--line);margin-left:6px;position:relative}
+.job:before{content:"";position:absolute;left:-7px;top:8px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.job .when{font-size:15px;color:var(--muted);margin:2px 0 6px}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.skills h3{font-size:17px;margin-bottom:8px}
+.skills .tags{margin:0}
+.certs{columns:2 300px;padding-left:20px;margin:0}
+.certs li{margin-bottom:8px;break-inside:avoid}
+.edu{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 0;border-bottom:1px solid var(--line)}
+footer{padding:56px 0 72px;border-top:1px solid var(--line)}
+footer .big{font:800 clamp(28px,5vw,44px)/1.15 "Bricolage Grotesque",sans-serif;margin:0 0 18px}
+@media(prefers-reduced-motion:no-preference){.hero h1{animation:in .7s ease-out both}@keyframes in{from{opacity:0;transform:translateY(14px)}}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Ashish Singh</b><div><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+
+<main class="wrap">
+<header class="hero">
+<h1>Ashish Singh</h1>
+<p class="lead">B.Tech CSE student from Prayagraj. I build machine learning models and connect them to web apps people can actually use.</p>
+<div class="btns"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a><a class="btn" href="assets/resume.pdf" download>Download resume</a></div>
+</header>
+
+<section id="about">
+<h2>About</h2>
+<p>I'm a third-year Computer Science student (2024 to 2028) with a foundation in data structures, Python, Java, and web development. My work sits between machine learning and full stack: training models with TensorFlow and scikit-learn, then shipping them behind React interfaces. I'm looking for an entry-level role or internship where I can work on real projects and keep learning.</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<article class="proj">
+<h3>Dog vs Cat Image Classifier</h3>
+<p>A CNN that classifies photos as dog or cat, with a prediction pipeline for new images. It reached about 90% or higher validation accuracy after tuning and augmentation.</p>
+<ul><li>Resizing, normalization, and data augmentation for preprocessing</li><li>Built and trained with TensorFlow and Keras</li><li>Deployed as a Streamlit app you can try yourself</li></ul>
+<ul class="tags"><li>Python</li><li>TensorFlow</li><li>Keras</li><li>CNN</li></ul>
+<div class="links"><a href="https://dog-vs-cat-classifier-jt3pyr7ckxdw9p9kky3zap.streamlit.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Ashish304544" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="proj">
+<h3>Todo App</h3>
+<p>A responsive task manager where you add, edit, delete, and track todos. Redux Toolkit keeps state simple and the code easy to maintain.</p>
+<ul class="tags"><li>React.js</li><li>Redux Toolkit</li><li>JavaScript</li><li>CSS</li></ul>
+<div class="links"><a href="https://redux-toolkit-todo-app-xi.vercel.app/" target="_blank" rel="noopener">Live demo</a><a href="https://github.com/Ashish304544" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+<article class="proj">
+<h3>House Price Prediction</h3>
+<p>Predicts house prices on the California Housing dataset with XGBoost regression. Covers data cleaning, exploratory analysis, and evaluation with R², MAE, and MSE (R² about 0.62).</p>
+<ul class="tags"><li>Python</li><li>Pandas</li><li>NumPy</li><li>Scikit-learn</li><li>XGBoost</li></ul>
+<div class="links"><a href="https://github.com/Ashish304544" target="_blank" rel="noopener">GitHub</a></div>
+</article>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+<div class="job"><h3>AI Intern, IBM (PBEL)</h3><p class="when">Jun 2026 to Jul 2026 · Remote</p>
+<ul><li>Built and evaluated AI/ML models in Python for real-world use cases</li><li>Implemented computer vision pipelines to process images and video and extract features</li><li>Connected AI backends to web client interfaces for end-to-end functionality</li></ul></div>
+<div class="job"><h3>Machine Learning Intern, Skillbit Technologies</h3><p class="when">Nov 2025 to Dec 2025 · Remote</p>
+<ul><li>Assisted with model building, data preprocessing, and performance analysis</li><li>Explored integrating ML models with React front-end components</li></ul></div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Languages</h3><ul class="tags"><li>Python</li><li>C</li><li>C++</li><li>Java</li><li>JavaScript</li></ul></div>
+<div><h3>Machine learning</h3><ul class="tags"><li>TensorFlow</li><li>Keras</li><li>Scikit-learn</li><li>XGBoost</li><li>NLP</li><li>LLMs</li><li>Computer vision</li></ul></div>
+<div><h3>Web</h3><ul class="tags"><li>React.js</li><li>Redux Toolkit</li><li>HTML</li><li>CSS</li><li>MySQL</li></ul></div>
+<div><h3>Tools</h3><ul class="tags"><li>Git</li><li>GitHub</li><li>Docker</li><li>Linux</li><li>AWS EC2</li></ul></div>
+</div>
+</section>
+
+<section id="education">
+<h2>Education and certifications</h2>
+<div class="edu"><span><b>B.Tech, Computer Science</b><br>United Institute of Technology, Prayagraj</span><span class="muted">2024 to 2028 · CGPA 6.75 (ongoing)</span></div>
+<div class="edu"><span>Class XII, Adarsh Shiksha Niketan</span><span class="muted">2023 · 81.2%</span></div>
+<div class="edu"><span>Class X, Radha Krishna Higher Secondary School</span><span class="muted">2021 · 88.6%</span></div>
+<h3 style="margin:32px 0 14px;font-size:18px">Certifications and achievements</h3>
+<ul class="certs">
+<li>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</li>
+<li>Claude Code in Action, Anthropic (2026)</li>
+<li>AI Skills Fest 2026, Microsoft</li>
+<li>Deloitte Australia Cyber Job Simulation, Forage</li>
+<li>Learning Basic ABAP Programming, SAP Learning (Aug 2026)</li>
+<li>Student Campus Ambassador, GSSoC</li>
+<li>Finalist, Vibe Coding Inter-College Competition, BMIET (2025)</li>
+<li>InsureBot Quest 2025 Hackathon, Unstop</li>
+</ul>
+</section>
+</main>
+
+<footer id="contact"><div class="wrap">
+<p class="big">Have a project or an opening? Let's talk.</p>
+<div class="btns"><a class="btn p" href="mailto:singhashish856308@gmail.com">singhashish856308@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/ashish-singh-44563b230/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/Ashish304544" target="_blank" rel="noopener">GitHub</a></div>
+<p class="muted" style="margin-top:32px;font-size:15px">Prayagraj, India</p>
+</div></footer>
+</body>
+</html>
